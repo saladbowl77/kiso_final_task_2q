@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="125.368" height="125.368" viewBox="0 0 125.368 125.368">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #707070;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="時計" transform="translate(-971.316 -872.316)">
+    <path id="パス_12" data-name="パス 12" class="cls-1" d="M54,0A53.948,53.948,0,1,1,35.426,3.279" transform="translate(988.041 995.99) rotate(-98)"/>
+    <path id="パス_13" data-name="パス 13" class="cls-2" d="M14.766,27,7.577,17.169,0,27" transform="matrix(0.695, -0.719, 0.719, 0.695, 967.368, 953.054)"/>
+    <path id="パス_14" data-name="パス 14" class="cls-2" d="M1034,890.517v45.633l33.476,22.151"/>
+  </g>
+</svg>

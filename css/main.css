@@ -1,0 +1,189 @@
+main {
+	width: calc(100lvw - 60px);
+	max-width: 1300px;
+	margin: 30px auto;
+	background-color: #b1d4f7;
+
+	font-family: "Zen Kaku Gothic New", Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+	overflow: hidden;
+}
+
+.section {
+	margin: 0 auto;
+	width: calc(100% - 60px);
+	max-width: 1000px;
+}
+
+hgroup {
+	margin-bottom: 35px;
+}
+hgroup p {
+	font-family: "Poppins", Arial, Helvetica, sans-serif;
+	font-size: 40px;
+	font-weight: 300;
+	line-height: 50px;
+}
+hgroup h2 {
+	font-size: 25px;
+	font-weight: 700;
+}
+
+.top {
+	width: 100%;
+	height: 70lvh;
+	max-height: 700px;
+	position: relative;
+}
+
+.topImage {
+	animation: logoAnimation 60s linear infinite;
+	display: flex;
+	margin-top: 30px;
+	height: 100%;
+}
+.topImage img {
+	height: 100%;
+	width: auto;
+}
+
+@keyframes logoAnimation {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(-200%);
+	}
+}
+
+.topHeading {
+	position: absolute;
+	left: 30px;
+	bottom: 30px;
+}
+
+.topHeading h1 {
+	font-family: "Zen Kurenaido", Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	line-height: 65px;
+}
+
+.topHeading span {
+	display: block;
+	width: fit-content;
+	position: relative;
+	z-index: 10;
+}
+
+.topHeading h1 span::after {
+	content: "";
+	position: absolute;
+	left: -15px;
+	top: 7px;
+	width: calc(100% + 30px);
+	height: 60px;
+	background-color: #fff;
+	/* あんまこれしたないな */
+	z-index: -1;
+}
+
+.topHeading p {
+	margin-top: 5px;
+	font-size: 20px;
+	line-height: 35px;
+}
+
+.topHeading p span::after {
+	content: "";
+	position: absolute;
+	left: -15px;
+	top: 4px;
+	width: calc(100% + 30px);
+	height: 30px;
+	background-color: #fff;
+	/* あんまこれしたないな */
+	z-index: -1;
+}
+
+.aboutContents {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 50px;
+}
+
+.aboutContentsWrap {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: calc(100% / 3);
+}
+
+.aboutContentsWrap img {
+	width: 100px;
+	height: 100px;
+	background-color: #fff;
+	border-radius: 9999px;
+	margin-bottom: 16px;
+	padding: 30px;
+}
+
+.aboutContentsWrap h3 {
+	margin-bottom: 8px;
+	font-size: 24px;
+}
+
+.aboutContentsWrap p {
+	font-size: 16px;
+}
+
+.ruinsWrap {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.ruinsWrapFirst,
+.ruinsWrapSecond {
+	display: flex;
+	list-style: none;
+	gap: 150px;
+}
+
+.ruinsWrapFirst {
+	justify-content: flex-start;
+}
+.ruinsWrapSecond {
+	justify-content: flex-end;
+}
+
+.ruinsCard {
+	width: 300px;
+	height: 180px;
+	list-style: none;
+	border-radius: 8px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 5px 5px 0px 0px #f2f399;
+}
+
+.ruinsCard .chip {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	background-color: #000;
+	border-radius: 9999px;
+	color: #fff;
+	padding: 4px 8px;
+}
+
+.ruinsCard img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
