@@ -81,16 +81,18 @@ section,
 summary,
 time,
 video {
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  margin: 0;
-  padding: 0; }
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	border: 0;
+	outline: 0;
+}
 
 body {
-  line-height: 1; }
+	line-height: 1;
+}
 
 article,
 aside,
@@ -102,63 +104,86 @@ hgroup,
 nav,
 section,
 blockquote {
-  display: block; }
+	display: block;
+}
 
 nav ul {
-  list-style: none; }
+	list-style: none;
+}
 
 ol {
-  list-style: decimal; }
+	list-style: decimal;
+}
 
 ul {
-  list-style: disc; }
+	list-style: disc;
+}
 
 ul ul {
-  list-style: circle; }
+	list-style: circle;
+}
 
 blockquote,
 q {
-  quotes: none; }
+	quotes: none;
+}
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: none; }
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+	content: none;
+}
 
 ins {
-  text-decoration: underline; }
+	text-decoration: underline;
+}
 
 del {
-  text-decoration: line-through; }
+	text-decoration: line-through;
+}
 
 mark {
-  background: none; }
+	background: none;
+}
 
 abbr[title],
 dfn[title] {
-  border-bottom: 1px dotted #000;
-  cursor: help; }
+	cursor: help;
+	border-bottom: 1px dotted #000;
+}
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+	border-spacing: 0;
+	border-collapse: collapse;
+}
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0; }
+	display: block;
+	height: 1px;
+	padding: 0;
+	margin: 1em 0;
+	border: 0;
+	border-top: 1px solid #ccc;
+}
 
-input[type=submit],
-input[type=button],
+input[type="submit"],
+input[type="button"],
 button {
-  margin: 0 !important;
-  padding: 0 !important; }
+	padding: 0 !important;
+	margin: 0 !important;
+}
 
 input,
 select,
 a img {
-  vertical-align: middle; }
+	vertical-align: middle;
+}
+
+:root {
+	--bg-color-primally: #b1d4f7;
+	--bg-color-secondary: #99c8f3;
+	--text-primally: #000;
+
+	font-family: "Zen Kaku Gothic New", Arial, Helvetica, sans-serif;
+}
