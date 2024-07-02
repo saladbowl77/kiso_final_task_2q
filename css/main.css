@@ -46,21 +46,21 @@ hgroup h2 {
 	display: flex;
 	height: 100%;
 	margin-top: 30px;
-	animation: logoAnimation 60s linear infinite;
 }
 
 .topImage img {
 	width: auto;
 	height: 100%;
+	animation: logoAnimation 60s linear infinite;
 }
 
 @keyframes logoAnimation {
 	0% {
-		transform: translateX(-100%);
+		transform: translateX(0%);
 	}
 
 	100% {
-		transform: translateX(-200%);
+		transform: translateX(-100%);
 	}
 }
 
