@@ -46,21 +46,21 @@ hgroup h2 {
 	display: flex;
 	height: 100%;
 	margin-top: 30px;
-	animation: logoAnimation 60s linear infinite;
 }
 
 .topImage img {
 	width: auto;
 	height: 100%;
+	animation: logoAnimation 60s linear infinite;
 }
 
 @keyframes logoAnimation {
 	0% {
-		transform: translateX(-100%);
+		transform: translateX(0%);
 	}
 
 	100% {
-		transform: translateX(-200%);
+		transform: translateX(-100%);
 	}
 }
 
@@ -68,6 +68,7 @@ hgroup h2 {
 	position: absolute;
 	bottom: 30px;
 	left: 30px;
+	width: 100%;
 }
 
 .topHeading h1 {
@@ -83,15 +84,18 @@ hgroup h2 {
 	width: fit-content;
 }
 
+.topHeading h1 span {
+	max-width: calc(100% - 60px);
+	margin-bottom: 10px;
+}
+
 .topHeading h1 span::after {
 	position: absolute;
-	top: 7px;
+	top: 0;
 	left: -15px;
-
-	/* あんまこれしたないな */
 	z-index: -1;
 	width: calc(100% + 30px);
-	height: 60px;
+	height: 100%;
 	content: "";
 	background-color: #fff;
 }
@@ -102,21 +106,26 @@ hgroup h2 {
 	line-height: 35px;
 }
 
+.topHeading p span {
+	max-width: calc(100% - 60px);
+	margin-bottom: 0;
+}
+
 .topHeading p span::after {
 	position: absolute;
-	top: 4px;
+	top: 0;
 	left: -15px;
-
-	/* あんまこれしたないな */
 	z-index: -1;
 	width: calc(100% + 30px);
-	height: 30px;
+	height: 100%;
 	content: "";
 	background-color: #fff;
 }
 
 .aboutContents {
-	display: flex;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	gap: 50px;
 	align-items: flex-start;
 	justify-content: space-between;
@@ -127,10 +136,10 @@ hgroup h2 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: calc(100% / 3);
 }
 
 .aboutContentsWrap img {
+	display: block;
 	width: 100px;
 	height: 100px;
 	padding: 30px;
@@ -158,7 +167,7 @@ hgroup h2 {
 .ruinsWrapFirst,
 .ruinsWrapSecond {
 	display: flex;
-	gap: 150px;
+	gap: 90px;
 	list-style: none;
 }
 
@@ -194,4 +203,83 @@ hgroup h2 {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+@media (width < 800px) {
+	.topHeading h1 {
+		font-size: 40px;
+		line-height: 55px;
+	}
+
+	.topHeading p {
+		font-size: 18px;
+		line-height: 25px;
+	}
+
+	.topHeading p span {
+		display: inline-block;
+	}
+
+	.aboutContents {
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
+	}
+
+	.aboutContentsWrap {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		justify-content: flex-start;
+	}
+
+	.aboutContentsWrap img {
+		width: 80px;
+		height: 80px;
+		padding: 20px;
+	}
+
+	.aboutContentsWrapText {
+		width: calc(100% - 110px);
+	}
+
+	.ruinsWrapFirst,
+	.ruinsWrapSecond {
+		gap: 10px;
+		justify-content: space-around;
+	}
+}
+
+@media (width < 500px) {
+	.topHeading h1 {
+		font-size: 30px;
+		line-height: 35px;
+	}
+
+	.aboutContentsWrap {
+		align-items: flex-start;
+	}
+
+	.aboutContentsWrap img {
+		width: 24px;
+		height: 24px;
+		padding: 4px;
+	}
+
+	.aboutContentsWrapText {
+		width: calc(100% - 28px);
+	}
+
+	.ruinsWrap {
+		gap: 16px;
+	}
+
+	.ruinsWrapFirst,
+	.ruinsWrapSecond {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.ruinsCard {
+		width: 100%;
+	}
 }

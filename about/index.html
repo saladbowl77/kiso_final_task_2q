@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/page.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Kurenaido&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header-section path="page"></header-section>
+		<main>
+			<hgroup>
+				<h1>About this site</h1>
+				<p>このサイトについて</p>
+			</hgroup>
+			<div id="profile">
+				<h2>運営者プロフィール</h2>
+				<p>
+					このサイトは、滋賀県守山市に住む、下之郷遺跡が大好きな遺跡少年が製作したサイトです。<br />
+					下之郷遺跡だけではなく、守山市の遺跡について広く浅く取り上げています。
+				</p>
+				<p>
+					一部情報には間違いがある可能性があります。<br />
+					その際は以下のお問い合わせフォームからお問い合わせいただけますと幸いです。
+				</p>
+			</div>
+			<div id="contact">
+				<h2>お問い合わせ</h2>
+				<p>
+					お問い合わせには3営業日以内に返信させていただきます。
+					(rkwt.meドメインからの受信を許可するようお願いします。)
+				</p>
+				<form>
+					<label for="name">お名前<span class="require">※必須</span></label>
+					<input type="text" id="name" name="name" required />
+
+					<label for="email"
+						>ご返信先 e-mailアドレス<span class="require">※必須</span></label
+					>
+					<input type="email" id="email" name="email" required />
+
+					<label for="about">お問い合わせ種別</label>
+					<select name="about" id="about">
+						<option value="none" disabled selected>選択してください</option>
+						<option value="value1">記事の間違い</option>
+						<option value="value2">その他</option>
+					</select>
+
+					<label for="content"
+						>お問い合わせ内容<span class="require">※必須</span></label
+					>
+					<textarea name="content" id="content"></textarea>
+				</form>
+			</div>
+		</main>
+		<footer-section path="page"></footer-section>
+	</body>
+	<script src="../js/header-component.js"></script>
+	<script src="../js/footer-component.js"></script>
+</html>

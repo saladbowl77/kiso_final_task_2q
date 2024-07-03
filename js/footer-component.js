@@ -31,12 +31,17 @@ const links = [
 				name: "お問い合わせ",
 				path: "/about/index.html#contact",
 			},
+			{
+				name: "コード(GitHub)",
+				path: "https://github.com/saladbowl77/kiso_final_task_2q",
+			},
 		],
 	},
 ];
 
 const genUrl = (type, path) => {
-	if (type === "root") return `.${path}`;
+	if (path.substr(0, 4) === "http") return path;
+	else if (type === "root") return `.${path}`;
 	else if (type === "article") return `../..${path}`;
 	else return `..${path}`;
 };
@@ -123,6 +128,8 @@ class FooterSection extends HTMLElement {
 
 				footer .footer_right ul {
 					list-style: none;
+					padding: 0;
+					min-width: 120px;
 				}
 
 				footer .footer_right li {
