@@ -151,12 +151,37 @@ p a {
 	color: #000;
 }
 
+p.source {
+	margin-top: 20px;
+}
+
 @media (width < 800px) {
+	.top hgroup h1 {
+		font-size: 40px;
+		line-height: 55px;
+	}
+
+	.top hgroup p {
+		font-size: 18px;
+		line-height: 25px;
+	}
+
+	.top hgroup p span {
+		display: inline-block;
+	}
+
 	.aboutWrap {
 		display: grid;
 		grid-template-rows: auto auto;
 		grid-template-columns: 1fr;
 		gap: 10px;
 		margin-top: 10px;
+	}
+}
+
+@media (width < 500px) {
+	.top hgroup h1 {
+		font-size: 30px;
+		line-height: 35px;
 	}
 }
