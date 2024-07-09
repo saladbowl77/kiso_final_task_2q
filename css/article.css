@@ -24,6 +24,10 @@ main {
 	border-radius: 12px;
 }
 
+.top img.bottom {
+	object-position: center bottom;
+}
+
 .top hgroup {
 	position: absolute;
 	right: 28px;
