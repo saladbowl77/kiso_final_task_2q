@@ -102,13 +102,15 @@ main {
 }
 
 .aboutWrap {
-	display: flex;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr;
 	gap: 10px;
 	margin-top: 10px;
 }
 
 .aboutWrap table {
-	width: 50%;
+	width: 100%;
 	height: fit-content;
 }
 
@@ -136,7 +138,7 @@ main {
 
 .aboutWrap .iframeWrap {
 	display: block;
-	width: calc(50% - 10px);
+	width: 100%;
 	aspect-ratio: 4 / 3;
 }
 
@@ -147,4 +149,14 @@ main {
 
 p a {
 	color: #000;
+}
+
+@media (width < 800px) {
+	.aboutWrap {
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-template-columns: 1fr;
+		gap: 10px;
+		margin-top: 10px;
+	}
 }
