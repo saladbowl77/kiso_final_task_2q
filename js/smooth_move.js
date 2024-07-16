@@ -1,16 +1,15 @@
+// 同一ドメインからの遷移のみアニメーションを再生。
+// アニメーションのチラつき防止のためデフォルトで要素表示
+const movedFromPage = document.getElementById("movedFromPageWrap");
 console.log(document.referrer.indexOf(window.location.hostname) !== -1);
 if (document.referrer.indexOf(window.location.hostname) !== -1) {
 	document.body.classList.add("noMove");
-	const movedFromPage = document.getElementById("movedFromPageWrap");
-	movedFromPage.insertAdjacentHTML(
-		"afterbegin",
-		`<div class="wave1"></div><div class="wave2"></div><div class="wave3"></div>`
-	);
-
 	setTimeout(() => {
-		movedFromPage.innerHTML = "";
+		// movedFromPage.innerHTML = "";
 		document.body.classList.remove("noMove");
 	}, 2000);
+} else {
+	movedFromPage.innerHTML = "";
 }
 
 const aTags = document.getElementsByTagName("a");
@@ -23,7 +22,11 @@ for (const a of aTags) {
 
 		moveToPage.insertAdjacentHTML(
 			"afterbegin",
-			`<div class="wave1"></div><div class="wave2"></div><div class="wave3"></div>`
+			`
+				<div class="wave1"></div>
+				<div class="wave2"></div>
+				<div class="wave3"></div>
+			`
 		);
 
 		setTimeout(() => {
