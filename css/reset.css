@@ -91,6 +91,7 @@ video {
 }
 
 body {
+	overflow-x: hidden;
 	line-height: 1;
 }
 
