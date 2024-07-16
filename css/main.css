@@ -189,6 +189,12 @@ hgroup h2 {
 	box-shadow: 5px 5px 0 0 #f2f399;
 }
 
+.ruinsCard a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
 .ruinsCard .chip {
 	position: absolute;
 	top: 5px;
