@@ -6,14 +6,24 @@
 
 ## 技術的にふざけたもの
 
-- web components
+- ### web components
+
   JavaScript で作れる例のコンポーネントです。header 並びに footer 部分に活用してます。
 
-- stylelint
+- ### pnpm / stylelint
+
   いや誰が stylelint を入れるんだよって声が聞こえてきそうですが、入れてます。
 
-  パッケージマネージャーは pnpm なので、以下のコードでインストールできます。
+  案の定(?)パッケージマネージャーは [pnpm](https://pnpm.io/ja/) なので、以下のコードでインストールできます。
 
-```bash
-pnpm i
-```
+  ```bash
+  pnpm i
+  ```
+
+  pnpm 自体は brew で入れるか corepack で入れるのをお勧めします
+
+  ```bash
+  corepack enable pnpm
+  # pnpm が有効になっているか確認
+  pnpm --version
+  ```
