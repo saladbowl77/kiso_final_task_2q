@@ -89,22 +89,13 @@ body:not(.noMove) .top hgroup p::after {
 
 @keyframes text-animation {
 	0% {
-		clip-path: polygon(
-			calc(100% + 8px) -8px,
-			calc(100% + 8px) -8px,
-			calc(100% + 8px) calc(100% + 8px),
-			calc(100% + 8px) calc(100% + 8px)
-		);
+		clip-path: inset(-8px -8px -8px calc(100% + 8px));
 		color: rgb(0 0 0 / 0%);
 	}
 
 	100% {
-		clip-path: polygon(
-			-8px -8px,
-			calc(100% + 8px) -8px,
-			calc(100% + 8px) calc(100% + 8px),
-			-8px calc(100% + 8px)
-		);
+		clip-path: po;
+		clip-path: inset(-8px -8px -8px calc(0% - 8px));
 		color: rgb(0 0 0 / 100%);
 	}
 }
