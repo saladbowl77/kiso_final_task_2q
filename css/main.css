@@ -45,16 +45,16 @@ hgroup h2 {
 .topImage {
 	display: flex;
 	height: 100%;
-	margin-top: 30px;
+	margin: 30px 0 0;
 }
 
 .topImage img {
 	width: auto;
 	height: 100%;
-	animation: logoAnimation 60s linear infinite;
+	animation: top-image-animation 60s linear infinite;
 }
 
-@keyframes logoAnimation {
+@keyframes top-image-animation {
 	0% {
 		transform: translateX(0%);
 	}

@@ -2,6 +2,7 @@
 <html lang="ja">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<title>守山市歴史観光情報サイト</title>
 		<meta
@@ -30,6 +31,12 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Kurenaido&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="apple-touch-icon"
+			type="image/png"
+			href="./apple-touch-icon-180x180.png"
+		/>
+		<link rel="icon" type="image/png" href="./icon-192x192.png" />
 	</head>
 	<body>
 		<div class="wrapper">
@@ -183,7 +190,17 @@
 				</div>
 			</main>
 			<footer-section path="root"></footer-section>
+			<div id="movedFromPageWrap">
+				<div class="wave1"></div>
+				<div class="wave2"></div>
+				<div class="wave3"></div>
+				<div class="wave4"></div>
+				<div class="wave5"></div>
+				<div class="wave6"></div>
+			</div>
+			<div id="moveToPageWrap"></div>
 		</div>
 	</body>
-	<script src="./js/footer-component.js"></script>
+	<script src="./js/footer_component.js"></script>
+	<script src="./js/smooth_move.js"></script>
 </html>

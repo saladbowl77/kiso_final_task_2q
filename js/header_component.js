@@ -27,8 +27,6 @@ class HeaderSection extends HTMLElement {
 			</header>
 
 			<style>
-				@import url('./css/reset.css');
-
 				header {
 					position: sticky;
 					top: 0;
