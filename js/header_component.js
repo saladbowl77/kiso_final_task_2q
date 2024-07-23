@@ -32,12 +32,12 @@ class HeaderSection extends HTMLElement {
 					top: 0;
 					left: 0;
 					box-sizing: border-box;
-					width: calc(100dvw - 60px);
+					width: 100dvw;
 					max-width: 1300px;
 					display: flex;
 					justify-content: flex-start;
 					padding: 20px 30px 15px;
-					margin: 0 auto;
+					margin: 0;
 					-webkit-backdrop-filter: blur(10px);
 					backdrop-filter: blur(10px);
 					background-color: rgba(177, 212, 247, 0.7);
