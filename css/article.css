@@ -4,7 +4,7 @@ body {
 }
 
 main {
-	width: calc(100lvw - 120px);
+	width: calc(100dvw - 120px);
 	max-width: 1240px;
 	padding: 30px;
 	margin: 10px auto 30px;

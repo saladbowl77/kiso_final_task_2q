@@ -32,7 +32,7 @@ class HeaderSection extends HTMLElement {
 					top: 0;
 					left: 0;
 					box-sizing: border-box;
-					width: 100%;
+					width: calc(100dvw - 60px);
 					max-width: 1300px;
 					display: flex;
 					justify-content: flex-start;
