@@ -52,18 +52,61 @@ main {
 	position: relative;
 	z-index: 10;
 	width: fit-content;
+	color: rgb(0 0 0 / 0%);
+}
+
+body:not(.noMove) .top hgroup h1,
+body:not(.noMove) .top hgroup p {
+	animation: 1s var(--springs-animation) 0.3s forwards text-animation;
 }
 
 .top hgroup h1::after,
 .top hgroup p::after {
 	position: absolute;
 	top: -7px;
-	left: -8px;
+	right: -8px;
 	z-index: -1;
-	width: calc(100% + 16px);
+	width: calc(0%);
 	height: calc(100% + 16px);
 	content: "";
 	background-color: #fff;
+}
+
+body:not(.noMove) .top hgroup h1::after,
+body:not(.noMove) .top hgroup p::after {
+	animation: 0.8s var(--springs-animation) 0.3s forwards bg-animation;
+}
+
+@keyframes bg-animation {
+	0% {
+		width: calc(0%);
+	}
+
+	100% {
+		width: calc(100% + 16px);
+	}
+}
+
+@keyframes text-animation {
+	0% {
+		clip-path: polygon(
+			calc(100% + 8px) -8px,
+			calc(100% + 8px) -8px,
+			calc(100% + 8px) calc(100% + 8px),
+			calc(100% + 8px) calc(100% + 8px)
+		);
+		color: rgb(0 0 0 / 0%);
+	}
+
+	100% {
+		clip-path: polygon(
+			-8px -8px,
+			calc(100% + 8px) -8px,
+			calc(100% + 8px) calc(100% + 8px),
+			-8px calc(100% + 8px)
+		);
+		color: rgb(0 0 0 / 100%);
+	}
 }
 
 .contents {
