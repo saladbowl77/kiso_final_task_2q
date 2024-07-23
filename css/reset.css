@@ -234,7 +234,7 @@ select {
 }
 
 #moveToPageWrap .wave {
-	animation: wave-to var(--springs-animation) 2s both;
+	animation: wave-to ease-in-out 2s both;
 }
 
 @keyframes wave-to {
@@ -250,7 +250,7 @@ select {
 }
 
 #movedFromPageWrap .wave {
-	animation: wave-from var(--springs-animation) 2.2s both;
+	animation: wave-from ease-in-out 2.2s both;
 }
 
 @keyframes wave-from {
