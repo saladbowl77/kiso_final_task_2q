@@ -23,9 +23,7 @@ for (const a of aTags) {
 		moveToPage.insertAdjacentHTML(
 			"afterbegin",
 			`
-				<div class="wave1"></div>
-				<div class="wave2"></div>
-				<div class="wave3"></div>
+				<div class="wave"></div>
 			`
 		);
 
